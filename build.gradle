@@ -3,7 +3,10 @@ import io.pivotal.pal.tracker.gradlebuild.DependenciesGraphPlugin
 buildscript {
     ext {
         springBootVersion = "2.0.6.RELEASE"
+        springCloudVersion = "Finchley.SR4"
+        springCloudServicesClientLibrariesVersion = "2.0.3.RELEASE"
         springVersion = "5.0.9.RELEASE"
+        springCloudCommonsVersion="2.0.0.RELEASE"
         mysqlVersion = "8.0.13"
         jacksonVersion = "2.9.7"
         slf4jVersion = "1.7.25"
@@ -45,7 +48,7 @@ subprojects {
         compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
         compile "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
         compile "org.slf4j:slf4j-api:$slf4jVersion"
-
+        
         testCompile "junit:junit:$junitVersion"
         testCompile "org.mockito:mockito-core:$mockitoVersion"
         testCompile "org.assertj:assertj-core:$assertJVersion"
